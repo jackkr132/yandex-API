@@ -44,14 +44,14 @@ class User:
             }
             self.link_list.append(new_dict)
         return (
-            f"Топ {self.count_max} фото с самым большим размером : \n {self.link_list} \n"
-            f"ВНИМАНИЕ! Если ваши фотографии на профиле меньше чем вы указали в параметрах то програма выводит только те фотки которые у вас есть \n"
+            f"Топ {self.count_max} фотография с самым большим размером : \n {self.link_list} \n"
+            f"ВНИМАНИЕ! Если ваши фотографии на профиле меньше чем вы указали в параметрах, то програма выводит только фотографии, которые у вас есть. \n"
         )
     def Yandex_upload(self, file_path, token=TOKEN_YANDEX):
         HEADERS = {"Authorization": f"OAuth {token}"}
         DOWNLOAD_LINK = "https://cloud-api.yandex.net/v1/disk/resources/upload"
         return_list = []
-        print("Прогресс в процессе просим подождать!")
+        print("Прогресс в процессе, подождите!")
         with alive_bar(len(self.link_list)) as bar:
             for links in self.link_list:
                 bar()
