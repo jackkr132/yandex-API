@@ -28,7 +28,7 @@ class User:
                 "v": self.version,
                 "album_id": "profile",
                 "count": self.count_max,
-                "extended": 1,d
+                "extended": 1,
                 "owner_id": self.user_id,
                 "photo_sizes": 1,
             },
